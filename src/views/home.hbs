@@ -1,0 +1,147 @@
+{{>header}}
+	<section>
+		<div class="contenedor">
+		<div class="izquierda">
+			<h1>Campizal</h1>
+			<h2>Construcciones</h2>
+			<h2>Proyectos a medida</h2>
+			<div class="botones">
+				<button class="boton"><i class="fa-solid fa-house"></i>	¡Oportunidades para usted!</button>
+				<button class="boton"><i class="fa-solid fa-hand-holding-dollar"></i>	Cotizaciones sin compromiso</button>
+			</div>
+		</div>
+		<div class="derecha">
+			<div class="slider-container">
+					<div class="slider">
+  				<div class="slider-wrapper">
+    				<img src="/img/Punta_del_este_.webp" alt="Image 1">
+    				<img src="/img/Punta_del_este_.webp" alt="Image 2">
+    				<img src="/img/Punta_del_este_.webp" alt="Image 3">
+  				</div>
+  				<div class="slider-prev">&lt;</div>
+  				<div class="slider-next">&gt;</div>
+			</div>
+			<div class="slider-dots-container">
+				<div class="slider-dots"></div>
+			</div>
+			</div>
+		</div>
+	</div>	
+	</section>
+
+	</section class="seccion-info">
+		<div class="separator-container">
+  			<div class="separator"></div>
+		</div>
+
+		<div class="container">
+			<div class="content">
+				<img src="/img/log.webp" alt="">
+			</div>
+			<h2 class="info">Construimos para <span class="azul">particulares</span>, <span class="azul">empresas</span> e <span class="azul">inversores</span>.</h2>
+		</div>
+
+		<div class="separator-container-left">
+  			<div class="separator-left"></div>
+		</div>
+	</section>
+
+	<section class="nosotros" id="seccion-nosotros">
+  <div class="imagen">
+    <img src="/img/Proyecto_vista _interior.webp" alt="Imagen de la empresa">
+  </div>
+  <div class="informacion">
+	<h1>Nuestra empresa está conformada por profesionales con vasta experiencia.</h1>
+    <h2>Misión:</h2>
+    <p><span class="number">1)</span> Realizar proyectos desde el primer boceto hasta la entrega de la llave.</p>
+    <p><span class="number">2)</span> Integrarnos solo para la etapa de construcción.</p>
+    <p><span class="number">3)</span> Buscar la mejor solución constructiva, analizando tanto sistemas tradicionales como innovadores.</p>
+	<br>
+	<p><span class="number">Director:</span> Ing. Tec. Daniel Schlebinger.</p>
+	<p><span class="number">Departamento Técnico:</span> Arc. Daniel Cal</p>
+	<p><span class="number">Los mejores proveedores</span> a disposición de nuestros proyectos.</p>
+	<br>
+	<button class="boton"><i class="fas fa-info"></i>	Directo a Contacto</button>
+  </div>
+</section>
+
+<div id="map">
+	
+</div>
+
+{{>footer}}
+
+<script>
+const sliderWrapper = document.querySelector(".slider-wrapper");
+const sliderImages = document.querySelectorAll(".slider-wrapper img");
+const sliderDots = document.querySelector(".slider-dots");
+const sliderPrev = document.querySelector(".slider-prev");
+const sliderNext = document.querySelector(".slider-next");
+const slideWidth = sliderImages[0].clientWidth;
+let slideIndex = 0;
+
+// Create dots
+sliderImages.forEach((_, index) => {
+  const dot = document.createElement("div");
+  dot.classList.add("slider-dot");
+  dot.addEventListener("click", () => {
+    goToSlide(index);
+  });
+  sliderDots.appendChild(dot);
+});
+
+// Set active dot
+const setActiveDot = (index) => {
+  const dots = document.querySelectorAll(".slider-dot");
+  dots.forEach((dot) => {
+    dot.classList.remove("active");
+  });
+  dots[index].classList.add("active");
+};
+
+// Go to slide
+const goToSlide = (index) => {
+  if (index < 0 || index >= sliderImages.length) {
+    return;
+  }
+  sliderWrapper.style.transform = `translateX(-${slideWidth * index}px)`;
+  slideIndex = index;
+  setActiveDot(slideIndex);
+};
+
+// Previous slide
+sliderPrev.addEventListener("click", () => {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = sliderImages.length - 1;
+  }
+  goToSlide(slideIndex);
+});
+
+// Next slide
+sliderNext.addEventListener("click", () => {
+  slideIndex++;
+  if (slideIndex >= sliderImages.length) {
+    slideIndex = 0;
+  }
+  goToSlide(slideIndex);
+});
+
+// Auto slide
+setInterval(() => {
+  slideIndex++;
+  if (slideIndex >= sliderImages.length) {
+    slideIndex = 0;
+  }
+  goToSlide(slideIndex);
+}, 5000);
+
+const scrollBtn = document.getElementById("nosotros");
+const scrollSection = document.getElementById("seccion-nosotros");
+
+scrollBtn.addEventListener("click", () => {
+  scrollSection.scrollIntoView({ behavior: "smooth" });
+});
+
+
+</script>

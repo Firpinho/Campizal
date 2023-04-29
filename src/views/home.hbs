@@ -65,6 +65,22 @@
   </div>
 </section>
 
+	<section class="presupuestos" id="seccion-presupuestos">
+  <div class="imagen">
+    <img src="/img/Proyecto_vista _interior.webp" alt="Imagen de la empresa">
+  </div>
+  <div class="informacion">
+	<h1>Asesoramiento sin costo.</h1>
+    <h2>La base para empezar a trabajar:</h2>
+    <p><span class="number">1)</span> Escuchamos su idea.</p>
+    <p><span class="number">2)</span> Hacemos una visita tecnica.</p>
+    <p><span class="number">3)</span> Analizamos opciones de sistemas constructivos.</p>
+	<p><span class="number">3)</span> Analizamos opciones de sistemas constructivos.</p>
+	<br>
+	<button class="boton"><i class="fas fa-info"></i>	Directo a Contacto</button>
+  </div>
+</section>
+
 <div id="map">
 	
 </div>
@@ -137,10 +153,20 @@ setInterval(() => {
 }, 5000);
 
 const scrollBtn = document.getElementById("nosotros");
-const scrollSection = document.getElementById("seccion-nosotros");
 
-scrollBtn.addEventListener("click", () => {
-  scrollSection.scrollIntoView({ behavior: "smooth" });
+scrollBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 800,
+    left: 0,
+    behavior: 'smooth'
+  }); // hace scroll suave a la posición y=500px
+});
+
+const scrollBtn_pre = document.getElementById("presupuestos");
+const scrollSection_pre = document.getElementById("seccion-presupuestos");
+
+scrollBtn_pre.addEventListener("click", () => {
+  scrollSection_pre.scrollIntoView({ behavior: "smooth" });
 });
 
 

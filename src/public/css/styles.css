@@ -412,117 +412,6 @@ nav {
   }
 /*end seccion 1*/
 
-/*home responsive*/
-.contenedor {
-    display: flex;
-    flex-direction: column;
-}
-
-.izquierda {
-    order: 1;
-    text-align: center;
-    padding: 20px;
-}
-
-.derecha {
-    order: 2;
-    margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .contenedor {
-        flex-direction: row;
-    }
-
-    .izquierda {
-        order: 1;
-        flex-basis: 50%;
-        text-align: left;
-        padding: 50px;
-    }
-
-    .derecha {
-        order: 2;
-        margin-top: 0;
-        flex-basis: 50%;
-    }
-}
-
-@media (min-width: 992px) {
-    .izquierda {
-        padding: 100px;
-    }
-}
-
-.slider-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.slider-wrapper {
-    width: 300%;
-    position: relative;
-    transition: transform 0.6s ease;
-}
-
-.slider img {
-    width: 100%;
-    display: inline-block;
-}
-
-.slider-prev,
-.slider-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    cursor: pointer;
-}
-
-.slider-prev:hover,
-.slider-next:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.slider-prev {
-    left: 0;
-}
-
-.slider-next {
-    right: 0;
-}
-
-.slider-dots-container {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: white;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.slider-dot.active {
-    background-color: gray;
-}
-
-/*end home responsive*/
 
 /*footer*/
 footer {
@@ -630,6 +519,17 @@ footer .footer-right ul li a:hover {
   padding-bottom: 70px;
 }
 
+.presupuestos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  margin-top: 200px;
+  padding-bottom: 70px;
+}
+
+
 .nosotros h1 {
   font-size: 40px;
   color: linear-gradient(to right, #3844bc, #2b3179);
@@ -670,3 +570,168 @@ footer .footer-right ul li a:hover {
   color: rgb(51, 51, 51);
 }
 /*END NOSOTROS*/
+
+
+
+
+
+
+
+
+
+
+
+/*home responsive*/
+/* Para pantallas con un ancho máximo de 600px */
+@media screen and (max-width: 600px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .izquierda {
+    padding: 50px;
+  }
+  .botones {
+    padding-top: 50px;
+  }
+  .slider-dots-container {
+    bottom: -40px;
+  }
+  .slider-prev,
+  .slider-next {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .nav-links {
+    width: 50%;
+  }
+  .nav-links li a {
+    font-size: 16px;
+  }
+  .logo img {
+    margin-left: 50px;
+  }
+  .nav-links {
+    margin-right: 50px;
+  }
+}
+
+/* Para pantallas con un ancho mínimo de 601px y un máximo de 900px */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .izquierda {
+    padding: 75px;
+  }
+  .botones {
+    padding-top: 75px;
+  }
+  .slider-prev,
+  .slider-next {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .nav-links {
+    width: 45%;
+  }
+  .nav-links li a {
+    font-size: 18px;
+  }
+  .logo img {
+    margin-left: 100px;
+  }
+  .nav-links {
+    margin-right: 100px;
+  }
+}
+
+/* Para pantallas con un ancho mínimo de 901px */
+@media screen and (min-width: 901px) {
+  .izquierda {
+    padding: 100px;
+  }
+  .botones {
+    padding-top: 100px;
+  }
+  .nav-links {
+    width: 35%;
+  }
+  .nav-links li a {
+    font-size: 20px;
+  }
+  .logo img {
+    margin-left: 200px;
+  }
+  .nav-links {
+    margin-right: 200px;
+  }
+}
+
+.nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0;
+  margin-top: 200px;
+}
+
+.imagen {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+}
+
+.informacion {
+  width: 100%;
+}
+
+.informacion h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.informacion p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .nosotros {
+    justify-content: space-between;
+  }
+  
+  .imagen {
+    width: 45%;
+    margin-bottom: 0;
+  }
+  
+  .informacion {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .social-icons {
+    margin-top: 20px;
+  }
+}
+/*end home responsive*/

@@ -26,8 +26,12 @@ app.set("view engine", ".hbs");
 
 //routes
 app.get("/", (req, res) => {
-    res.render('home', {titulo: "Campizal contrucciones"});
+    res.render('home');
 });
+
+app.get("/oportunidades", (req, res) => {
+    res.render('content/oportunidades.hbs')
+}); 
 
 
 //app

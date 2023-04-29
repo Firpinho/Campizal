@@ -1,0 +1,70 @@
+{{>header}}
+
+<section class="product-cards">
+
+<div class="card">
+ <div class="card-left">
+  <div id="slider">
+  <div class="slide active">
+    <img id="img1" src="/img/Panorámica_Partenón.webp" alt="Imagen 1">
+    <p>Diseño <span class="azul">Partenón</span>.</p>
+  </div>
+  <div class="slide">
+    <img id="img2" src="/img/Plano_Modelo_Partenón.webp" alt="Imagen 2">
+    <p>Le presentamos un esquema del <span class="azul">plano de la casa Partenón</span>.</p>
+  </div>
+  <div class="slide">
+    <img id="img3" src="/img/Etapa_constructiva_1.webp" alt="Imagen 3">
+    <p>Acá tenemos <span class="azul">una vista aérea de la obra con las paredes levantadas</span>.</p>
+  </div>
+    <div class="slide">
+    <img id="img4" src="/img/Etapa_constructiva_2.webp" alt="Imagen 4">
+    <p>Desde el drone <span class="azul">vemos la estructura del techo recién instalada</span>.</p>
+  </div>
+    <div class="slide">
+    <img id="img5" src="/img/Interior_de _piso_a_techo.webp" alt="Imagen 5">
+    <p>Vista interior de la cocina: <span class="azul">la cerámica de piso a techo le da elegancia a la cocina</span>.</p>
+  </div>
+      </div>
+</div>
+    <div class="card-right">
+    <div class="content-wrapper">
+        <div class="card-title">
+            <h2>Un ejemplo: <span class="azul">El DISEÑO PARTENÓN</span>, desarrollado por <span class="azul">MUROFACIL®</span>.</h2>
+        </div>
+
+        <div class="card-content">
+            <p><span class="number">1)</span> Material de paredes y techo: MUROFACIL®</p>
+            <p><span class="number">2)</span> Dormitorios: 2</p>
+            <p><span class="number">3)</span> Superficie construida: 45,68m²</p>
+            <p><span class="number">4)</span> Iluminación natural: Por aberturas de piso a techo</p>
+        </div>
+        
+      <button class="boton"><i class="fas fa-info"></i>	Directo a Contacto</button>
+    </div>
+</div>
+</div>
+
+</section>
+
+<script>
+    
+  var slides = document.querySelectorAll('.slide');
+  var currentSlide = 0;
+
+function startSlider() {
+  slides[0].className = 'slide active';
+  setInterval(nextSlide, 5000);
+}
+
+
+  function nextSlide() {
+    slides[currentSlide].className = 'slide';
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].className = 'slide active';
+  }
+
+  window.onload = startSlider;
+</script>
+
+{{>footer}}

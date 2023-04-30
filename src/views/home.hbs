@@ -6,7 +6,7 @@
 			<h2>Construcciones</h2>
 			<h2>Proyectos a medida</h2>
 			<div class="botones">
-				<button class="boton"><i class="fa-solid fa-house"></i>	¡Oportunidades para usted!</button>
+				<button onclick="window.location.href = '/oportunidades'" class="boton"><i class="fa-solid fa-house"></i>	¡Oportunidades para usted!</button>
 				<button class="boton"><i class="fa-solid fa-hand-holding-dollar"></i>	Cotizaciones sin compromiso</button>
 			</div>
 		</div>
@@ -151,23 +151,5 @@ setInterval(() => {
   }
   goToSlide(slideIndex);
 }, 5000);
-
-const scrollBtn = document.getElementById("nosotros");
-
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 800,
-    left: 0,
-    behavior: 'smooth'
-  }); // hace scroll suave a la posición y=500px
-});
-
-const scrollBtn_pre = document.getElementById("presupuestos");
-const scrollSection_pre = document.getElementById("seccion-presupuestos");
-
-scrollBtn_pre.addEventListener("click", () => {
-  scrollSection_pre.scrollIntoView({ behavior: "smooth" });
-});
-
 
 </script>

@@ -4,7 +4,7 @@
     <img src="/img/log.webp" alt="Logo">
   </div>
   <ul class="nav-links">
-    <li><a href="/">Home</a></li>
+    <li><a id="home">Home</a></li>
     <li><a id="nosotros">Nosotros</a></li>
     <li><a id="presupuestos">Presupuestos</a></li>
     <li><a href="oportunidades">Oportunidades</a></li>
@@ -39,5 +39,54 @@ burger.addEventListener('click', () => {
   // Burger Animation
   burger.classList.toggle('toggle');
 });
+
+const scrollBtn = document.getElementById("nosotros");
+
+scrollBtn.addEventListener('click', () => {
+    window.location.href = "/#nosotros";
+    scroll(window.location.hash);
+});
+
+const scrollBtn_home = document.getElementById("home");
+
+scrollBtn_home.addEventListener('click', () => {
+    window.location.href = "/#home";
+    scroll(window.location.hash);
+});
+
+const scrollBtn_pre = document.getElementById("presupuestos");
+
+scrollBtn_pre.addEventListener("click", () => {
+      window.location.href = "/#seccion-presupuestos";
+      scroll(window.location.hash);
+});
+
+window.addEventListener('load', () => {
+  scroll(window.location.hash);
+})
+
+function scroll(hash){
+  switch(hash){
+    case "#nosotros":
+            window.scrollTo({
+              top: 800,
+              behavior: 'smooth'
+            });
+        break;
+    case "#seccion-presupuestos":
+            window.scrollTo({
+              top: 1600,
+              behavior: 'smooth'
+            });
+        break;
+    case "#home":
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        break;
+  }
+}
+
 
 </script>

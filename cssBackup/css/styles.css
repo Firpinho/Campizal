@@ -1,0 +1,1204 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}   
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+    font-display: swap
+}   
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/static/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}   
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/static/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+    font-display: swap
+}   
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    font-family: 'Montserrat';
+    font-size: 62.5%;
+    color: rgb(58, 58, 58);
+    background-color: ghostwhite;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative
+}
+
+/* HEADER  */
+
+header {
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed; 
+    top: 0;
+    right: 0;
+    left: auto;
+    z-index: 2;
+    width: 100%;
+    gap: 40%;
+}
+
+header img{
+    width: 50px;
+    padding-left: 10%;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 3px;
+    max-width: 150px;
+    min-height: 50px;
+    padding: 0 20px;
+}
+
+nav ul li:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+header nav ul li a{
+    color: rgb(44, 44, 44);
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+header .more-list{
+    display: none;
+    position: absolute;
+    width: auto;
+    top: 50px;
+    right: 0;
+    background-color: ghostwhite;
+}
+
+#more:hover .more-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.more-list li{
+    min-width: 100%;
+    margin: 0 auto;
+}
+
+.more-list hr {
+    display: block; 
+}
+
+nav hr {
+    height: 30px;
+    width: 1px;
+    border-style: solid;
+    background-color: rgb(44, 44, 44);
+    border-color: rgb(44, 44, 44);
+}
+
+.opt-1, .opt-2, .opt-3, .opt-4{
+    display: none;
+}
+
+/* MAIN CONTENT  */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    padding:30% 0;
+    color: #104095;
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(255, 255, 255, 0.151)), url('../img/index.webp');
+    background-size: cover;
+    background-position: center center;
+    min-height: 60vh;
+}
+
+.title{
+    font-family: 'Ubuntu';
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.main img {
+    width: 150px;
+}
+
+.heading h1 {
+    font-size: 40px;
+}
+
+.heading h2 {
+    font-size: 25px;
+}
+
+.economia-plateada {
+    font-size: 15px;
+    margin-bottom: 90px;
+}
+
+.economia-plateada  p{
+    margin-bottom: 5px;
+}
+
+.buttons-container{
+    margin-top: 10px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 100px;
+    border-style: solid;
+    color: ghostwhite;
+    font-weight: bold;
+    background-color: #104095;
+    border-color: #104095;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* ADY CONTENT*/
+
+.ady-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ady-content .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
+    padding: 15px 0;
+}
+
+.ady-content hr{
+    height: 15px;
+    background-color: #104095;
+    border-color: #104095;
+    border-style: solid;
+}
+
+.ady-content img {
+    width: 110px;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    color: ghostwhite;
+    background-color: #104095;
+    display: grid;
+    grid-template-columns: 200px auto 100px;
+    position: relative;
+    bottom: 0;
+   /*  padding: 50px 0; */
+}
+
+footer img {
+    filter: brightness(0) invert(1);
+    width: 50px;
+}
+
+.logo {
+    font-family: 'Ubuntu';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    align-items: center;
+    justify-content: center;
+}
+
+/*
+    CONTACTO
+*/
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact h4{
+    font-size: large;
+    padding-bottom: 50px;
+}
+
+.contact hr {
+    width: 60%;
+    margin: 50px 0;
+    align-self: center;
+    border-style: solid;
+    border-color: #104095;
+    background-color: #104095;
+}
+
+.contact  iframe{
+    width: 90vw;
+    height: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 3px;
+    border-color: #104095;
+}
+
+.contact-info .info p{
+    padding: 30px;
+    font-size: medium;
+}
+
+.contact-info .info .mail-phone{
+    align-self: center;
+    padding: 40px 0;
+    font-size: medium;
+}
+
+.contact-info .info .mail-phone p{
+    padding: 5px;
+    font-size: large;
+}
+
+.mail-phone p a{
+    display: flex;
+    text-decoration: none;
+    color: #104095;
+    gap: 1rem;
+}
+
+
+footer .image {
+    text-align: center;
+}
+
+.footer-title {
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+/*
+
+  FIN INDEX / HEADER / FOOTER
+
+*/
+
+main {
+    margin-top: 50px;
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(255, 255, 255, 0.596)), url('../img/nosotros.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+main h1 {
+    font-size: 30px;
+    padding: 25px 10px;
+    text-align: center;
+    text-justify: distribute;
+    margin-bottom: 30px;
+}
+
+main h2 {
+    text-align: center;
+}
+
+.mision {
+    padding: 40px 20px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.mision .title {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.mision ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team article {
+    display: flex;
+    padding: 40px 0;
+}
+
+.team article img {
+    padding-right: 20px;
+}
+
+.team img {
+    width: 120px;
+}
+
+/*
+    FIN NOSOTROS 
+*/
+.container-economia-plateada {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.premium{
+    background-color: rgb(32, 32, 32);
+    color: ghostwhite;
+    padding: 25px 0;
+    min-height: 80vh;
+}
+
+.premium article{
+    padding-bottom: 50px;
+}
+
+.premium h1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.premium h2 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.premium hr {
+    background-color: #8b51f5;
+    border-color: #8b51f5;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.premium p {
+    text-align: justify;
+    text-justify: distribute;
+    font-size: small;
+    font-weight: 500;
+    margin: 25px
+}
+
+.premium button {
+    padding: 15px 50px;
+    font-size: 20px;
+}
+
+.premium .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 90px 0;
+}
+
+.apartamentos-premium{
+    background-image: linear-gradient(to top,rgb(32, 32, 32), rgba(0, 0, 0, 0.658)), url('../img/apartamentos_premium.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+.inversion-retiro{
+    background-image: linear-gradient(to top,rgb(32, 32, 32), rgba(0, 0, 0, 0.658)), url('../img/inversion_retiro.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+/*
+    FIN APARTAMENTOS PREMIUM
+*/
+
+.campizal{
+    color: rgb(58, 58, 58);
+    min-height: 100vh;
+}
+
+.campizal article{
+    padding: 30px 10%;
+}
+
+.campizal h1 {
+    text-align: center;
+    font-size: 25px;
+    padding: 25px 0;
+}
+
+.campizal h2 {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.campizal hr {
+    background-color: #104095;
+    border-color: #104095;
+    width: 120px;
+    margin: 0 auto;
+}
+
+.campizal p {
+    text-align: justify;
+    text-justify: distribute;
+    font-size: small;
+    font-weight: 500;
+    margin: 25px
+}
+
+.campizal button {
+    padding: 15px 50px;
+    font-size: 20px;
+}
+
+.campizal .button-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 90px;
+    justify-content:flex-end;
+    align-self: end;
+    padding: 90px 0;
+    margin-right: 20rem;
+    margin: 0 auto;
+}
+
+.confort{
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(255, 255, 255, 0.596)), url('../img/confort.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+.llave-en-mano{
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(255, 255, 255, 0.596)), url('../img/llave_en_mano.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+.presupuestos {
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(255, 255, 255, 0.596)), url('../img/presupuestos.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+.casas-financiadas {
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgba(255, 255, 255, 0.596)), url('../img/casas_financiadas.webp');
+    background-size: cover;
+    background-position: center center;
+}
+
+/*
+    Fin campizal class
+*/
+
+
+/*
+    Campizal Oportunidades
+*/
+.oportunidades {
+    margin-top: 50px;
+}
+
+.oportunidades h1 {
+    padding: 50px 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.oportunidades hr {
+    height: 2px;
+    width: 200px;
+    background-color: #104095;
+    border-color: #104095;
+    align-self: center;
+}
+
+.project {
+    background-color: #dddddd;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color:#c7c7c7;
+    width: 90%;
+    margin: 5% auto;
+}
+
+.project h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.project-head {
+    display: flex;
+    flex-direction: column;
+    color: rgb(180, 180, 180);
+    background-image: linear-gradient(to top ,rgba(0, 0, 0, 0.712) , rgba(0, 0, 0, 0.712)), url('../img/partenon.webp');
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    height: 50vh;
+}
+
+.project-head .project-title {
+    text-align: center;
+}
+
+.project-head h2 {
+    font-size: 30px;
+    margin: 20px auto;
+}
+
+.project-head h3 {
+    font-size: medium;
+    margin: 0 auto;
+}
+
+.project-head .caracteristicas {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    padding: 60px 20px;
+    gap: 1rem;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    min-height: 65vh;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.galeria .galery-content{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 50%);
+    grid-gap: 10px;
+}
+
+.galery-content img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.project .button-container-oportunidades {
+    margin: 0 auto;
+    padding: 20rem 0 50px;
+    width: 50%;
+}
+
+.project .button-container-oportunidades  button{
+    width: 100%;
+}
+
+.item:hover{
+    position: relative;
+}
+
+.item-desc{
+    display: none;
+    color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.771);
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    user-select: none;
+}
+
+.item:hover .item-desc{
+    display: flex;
+}
+
+/*
+    ECONOMIA PLATEADA
+*/
+
+.eplateada-content h1{ 
+    font-size: large;
+    text-align: center;
+    padding: 30px;
+}
+
+.card-container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 80vw;
+    max-width: 90vw;
+}
+
+.card-container .card {
+    background-color: ghostwhite;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #c7c7c7;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 30px;
+}
+
+.card-container .card img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card-container .card h2{
+    font-size: large;
+}
+
+.card-container .card hr{
+    width: 20%;
+    margin: 10px auto;
+    border-color: #104095;
+    background-color: #104095;
+}
+
+.card-container .card p{
+    padding: 40px;
+    font-size: small;
+}
+
+.card-container .card button{
+    margin-bottom: 20px;
+}
+
+/*
+    Fin Campizal Oportunidades
+*/
+
+@media screen and (min-width:600px){
+
+    /*
+        index
+    */
+    .title{
+        display: flex;
+        align-items: center;
+        font-size: 70px;
+    }
+
+    .title img {
+        width: 100px;
+    }
+
+    .main{
+        padding: 5% 0;
+    }
+
+    .buttons-container button{
+        padding: 15px;
+        font-size: medium;
+        margin: 0 5px 0 0;
+    }
+
+    /*
+        nosostros
+    */
+    .team {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .mision .title {
+        font-size: large;
+    }
+
+    header .more-list{
+        max-width: 50%;
+    }
+
+    header .more-list li{
+        min-width: 100%;
+    }
+}
+
+
+@media screen and (min-width:768px){
+    /*
+        index
+    */
+    .opt-1, .opt-2{
+        display: flex;
+    }
+
+    .opt-1-v, .opt-2-v{
+        display: none;
+    }
+
+    .main{
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 5% 0 5% 10%;
+        background-image: linear-gradient(to right,rgb(255, 255, 255), rgba(255, 255, 255, 0.151)), url('../img/index.webp');
+    }
+
+    .title img {
+        width: 150px;
+    }
+
+    h3 {
+        font-size: large;
+    }
+
+    .heading h1{
+        font-size: 60px;
+    }
+
+    .heading h2{
+        font-size: 35px;
+    }
+
+    button{
+        padding: 13px;
+        margin: 0 10px 0 0;
+    }
+    /*
+        nosostros
+    */
+    .team-member {
+        margin: 100px 30px;
+    }
+
+    .team img {
+        width: 200px;
+    }
+
+    .mision {
+        padding: 130px 60px;
+        font-size: large;
+    }
+
+    .premium .button-container {
+        padding: 120px 0;
+    }
+
+    .premium h1 {
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    .premium h2 {
+        text-align: left;
+        margin-left: 20rem;
+    }
+
+    .campizal .button-container {
+        padding: 120px 0;
+    }
+
+    .campizal h1 {
+        text-align: left;
+        margin-left: 35px;
+    }
+
+    header .more-list{
+        max-width: 35%;
+    }
+
+    /*
+        oportunidades
+    */
+    .project-head {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .project-head .project-title {
+        padding-left: 30px;
+    }
+
+    .project-head h2 {
+        font-size: 45px;
+        text-align: left;
+    }
+
+    .project-head .caracteristicas {
+        font-size: medium;
+        padding: 60px;
+        gap: 1rem;
+    }
+
+    .galeria .galery-content{
+        padding: 3% 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 60% repeat(2, 60%);
+    }
+
+    #item-uno {
+        grid-row: span 2;
+    }
+
+    #item-cuatro {
+        grid-column: span 2;
+    }
+
+    .eplateada-content h1 {
+        font-size: 30px;
+    }
+
+    .contact  iframe{
+        width: 50vw;
+    }
+
+    .card-container .card h2{
+        padding: 40px 0;
+        font-size: 25px;
+    }
+
+    .card-container .card p{
+        font-size: medium;
+    }
+
+    .card-container .card button{
+        font-size: medium;
+    }
+}
+
+
+@media screen and (min-width:980px){
+    html{
+        width: 100%;
+    }
+    /*
+        index
+    */
+
+    footer .logo {
+        font-size: 20px;
+        justify-content: flex-end;
+    }
+    /*
+        nosostros
+    */
+    main h1 {
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+
+    main h2 {
+        font-size: 30px;
+        text-align: end;
+        margin-right: 20px;
+    }
+
+    .team img {
+        width: 250px;
+    }
+
+    .mision {
+        padding: 130px 60px;
+        font-size: large;
+    }
+
+    .premium h1 {
+        font-size: 40px;
+    }
+
+    .premium h2 {
+        text-align: left;
+        margin-left: 20rem;
+    }
+
+    .main-premium p {
+        max-width: 60%;
+        font-size: medium;
+    }
+    
+    .main-premium hr{
+        margin: 0 45px;
+    }
+
+    .main-premium-list p{
+        font-size: 20px;
+    }
+
+    .campizal h1 {
+        font-size: 40px;
+    }
+
+    .campizal h2 {
+        text-align: left;
+        margin-left: 20rem;
+    }
+
+    .main-campizal p {
+        max-width: 60%;
+        font-size: medium;
+    }
+    
+    .main-campizal hr{
+        margin: 0 45px;
+    }
+
+    .main-campizal-list p{
+        font-size: 20px;
+    }
+
+    header .more-list{
+        max-width: 25%;
+    }
+
+    .contact-info{
+        display: flex;
+        justify-content: space-around;
+        padding: 50px;
+    }
+
+    .contact-info .info p{
+        padding: 30px;
+        font-size: 20px;
+    }
+
+    .mail-phone{
+        font-size: 25px;
+        display: flex;
+        gap: 5rem;
+    }
+
+    .mail-phone p{
+        font-size: 25px;
+    }
+
+    .contact  iframe{
+        width: 30vw;
+    }
+
+    .card-container{
+        flex-direction: row;
+        gap: 5rem;
+    }
+}
+
+@media screen and (min-width:1300px){
+
+    .opt-3, .opt-4{
+        display: flex;
+    }
+
+    .opt-3-v, .opt-4-v{
+        display: none;
+    } 
+
+    .main-premium p {
+        padding-top: 50px;
+        max-width: 50%;
+        font-size: medium;
+    }
+    
+    .main-premium-list {
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-premium-list .list{
+        padding: 0 100px;
+        font-size: 90px;
+        width: 100%;
+    }
+    
+    .main-premium-list button{
+        padding: 15px 50px;
+        font-size: 30px;
+    }
+
+    .main-campizal p {
+        padding-top: 50px;
+        max-width: 50%;
+        font-size: medium;
+    }
+    
+    .main-campizal-list {
+        padding-top: 50px;
+        display: flex;
+    }
+
+    .main-campizal-list .list{
+        padding: 0 100px;
+        font-size: 90px;
+        width: 100%;
+    }
+    
+    .main-campizal-list button{
+        display: flex;
+        gap: 2rem;
+        padding: 15px 60px;
+        font-size: 30px;
+    }
+
+    header .more-list{
+        max-width: 20%;
+    }
+
+    .oportunidades h1 {
+        font-size: 50px;
+    }
+
+    .project-head {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .project-head .project-title {
+        padding-left: 30px;
+    }
+
+    .project-head h2 {
+        font-size: 60px;
+        text-align: left;
+    }
+
+    .project-head h3 {
+        font-size: 30px;
+        text-align: left;
+    }
+
+    .project-head .caracteristicas {
+        font-size: large;
+        padding: 60px;
+        gap: 1rem;
+    }
+
+    .galeria .galery-content{
+        padding: 3% 0;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100% repeat(2, 90%);
+    }
+
+    #item-uno {
+        grid-row: span 2;
+    }
+
+    #item-tres {
+        grid-row: span 2;
+    }
+
+    #item-cuatro {
+        grid-column: span 1;
+    }
+}
+
+.economia-plateada-link{
+    color: #8b51f5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.buttons-container .economia-plateada-button{
+    background-color: #8b51f5;
+    border-color: #8b51f5;
+}
+
+.economia-plateada-button{
+    background-color: #8b51f5;
+    border-color: #8b51f5;
+}
+
+.azul {
+    color: #104095;
+}
+
+.azul-bold {
+    color: #104095;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+.swal2-html-container {
+    font-size: medium !important;
+    font-family: 'Montserrat';
+    font-weight: 490 !important;
+    color: rgb(58, 58, 58);
+    text-align: left !important;
+    gap: 4.5rem !important;
+}
+
+.swal2-html-container p{
+    padding: 1.5rem  0 !important;
+}
+

@@ -1,0 +1,71 @@
+header {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        font-weight: bold;
+        .list {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 60px;
+            ul {
+                list-style: none;
+                background-color: white;
+                border-radius: 10px;
+                li {
+                    display: none;
+                    padding: 40px 0 25px;
+                    margin-bottom: 15px;
+                    border-radius: 10px;
+                    a {
+                        min-height: 100%;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        color: $text_color;
+                        text-decoration: none;
+                        gap: 1rem;
+                    }
+                    .menu {
+                        height: 0;
+                        overflow: hidden;
+                        width: 100%;
+                        li {
+                            padding: 15px 0;
+                            margin: 20px 5px 5px;
+                        }
+                    }
+                    &:active {
+                        background-color: $hover_color;
+                        .menu {
+                            height: auto;
+                            background-color: $hover_color;
+                            li {
+                                &:hover {
+                                    background-color: white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        span {   
+            padding: 5px 30px;
+            &:hover {
+                ul {
+                    li{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

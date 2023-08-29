@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="../third-party/fontawesome-free-6.4.2-web/js/all.min.js"
+      crossorigin="anonymous"
+      async
+    ></script>
+    <script src="../third-party/sweetalert2/sweetalert2.all.min.js"></script>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <title>Campizal | Casas Financiadas</title>
+
+    <link
+      rel="shortcut icon"
+      href="../img/logo.webp"
+      type="image/x-icon"
+      title="Campizal Construcciones | Campizal"
+    />
+  </head>
+  <body>
+    <div class="container-economia-plateada">
+      <header></header>
+
+      <section class="content campizal casas-financiadas">
+        <article class="main-premium">
+          <h1 class="azul">
+            Casas 100% financiadas, sin entrega y al mejor precio
+          </h1>
+          <h2>
+            Construimos casas sin
+            <a id="prestamo-campizal" style="cursor: pointer;"
+              ><span class="azul"><i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 10px;"></i
+                > entrega inicial</span></a
+            >
+            a pura cuota, o con pago por avance de obra
+          </h2>
+          <hr />
+        </article>
+
+        <article class="main-campizal-list">
+          <div class="list">
+            <p><b>1)</b> Escuchamos su idea.</p>
+            <p><b>2)</b> Hacemos una visita técnica.</p>
+            <p><b>3)</b> Analizamos opciones de sistemas constructivos.</p>
+            <p>
+              <b>4)</b> Diseñamos el primer boceto con nuestro arquitecto, o nos
+              reunimos con el suyo, todo sin costo para usted.
+            </p>
+          </div>
+          <div class="button-container">
+            <button><i class="fa-solid fa-circle-info"></i> Contacto</button>
+          </div>
+        </article>
+      </section>
+
+      <footer></footer>
+    </div>
+    <script src="../js/scripts.min.js"></script>
+    <script>
+      document
+        .getElementById("prestamo-campizal")
+        .addEventListener("click", () => {
+          const prestamo_campizal = `
+                <p>Sin límite de edad, si es una persona mayor no se descarta.</p>
+                <p>Si bien ayuda estar libre del Clearing de Informes, en caso de figurar, no se descartan personas, se estudia el crédito.</p>
+                <p>Se necesita que el terreno o propiedad que respalda el préstamo valga el doble del dinero a prestar.</p>
+                <p>Interés <span class='azul-bold'>TEA 10%</span>.</p>
+                <p><span class="azul-bold">U$S 3.500,00</span> de gastos</p>
+                <p>Costo de cancelación <span class="azul-bold">U$S 700,00</span>.</p>
+                <p>Precancelación sin gastos ni recargos.</p>
+                <p>Estar en orden los títulos, sin deudas.</p>
+                <hr/>
+                <p>Ejemplo :</p>
+                <p>Terreno o propiedad de <span class='azul-bold'>U$S 40.000,00</span> en la mano <span class='azul-bold'>U$S 20.000,00</span>.</p>
+                <p><span class='azul-bold'>Opción 1</span>: Devolución en <span class='azul-bold'>120</span> cuotas de <span class='azul-bold'>U$S 305,00</span>.</p>
+                <p><span class='azul-bold'>Opción 2</span>: Devolución en <span class='azul-bold'>84</span> cuotas de <span class='azul-bold'>U$S 385,00</span>.</p>
+                <br>
+                `;
+
+          Swal.fire({
+            title:
+              "Condiciones del préstamo Campizal Construcciones para construir",
+            html: prestamo_campizal,
+            icon: "info",
+            iconColor: "#104095",
+            buttonsStyling: false,
+            customClass: {
+              cancelButton: "button",
+            },
+            confirmButtonText:
+              '<i class="fa-solid fa-circle-info"></i> <b>Contacto</b>',
+            width: 600,
+            customClass: "alert",
+            showCancelButton: true,
+            cancelButtonText: '<i class="fa-solid fa-xmark"></i> <b>Cerrar</b>',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location.href =
+                "https://www.campizal.com/newCampizal/index.html#contact-section";
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

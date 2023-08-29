@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../fonts/Ubuntu-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}   
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../../fonts/Ubuntu-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+    font-display: swap
+}   
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/static/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}   
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../fonts/static/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-style: bold;
+    font-display: swap
+}   
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Montserrat';
+    color : $text_color;
+    width: 100%;
+}
+
+.economia_plateada_color {
+    text-decoration: none;
+    color: $economia_plateada_color;
+    font-weight: bold;
+}
+
+.campizal-color {
+    text-decoration: none;
+    color: $campizal_color;
+    font-weight: bold;
+}
+
+button {
+    color: ghostwhite;
+    font-size: medium;
+    font-weight: bold;
+    border-style: solid;
+    background-color: $campizal_color;
+    border-color: $campizal_color;
+    border-radius: 50px;
+    padding: 15px;
+}
+
+.economia-plateada-button {
+    background-color: $economia_plateada_color;
+    border-color: $economia_plateada_color;
+}
+
+hr {
+    border-style: none;
+}
